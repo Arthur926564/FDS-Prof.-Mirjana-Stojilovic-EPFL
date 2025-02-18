@@ -1,0 +1,162 @@
+\lecture{1}{2025-02-17}{Number Systems}{}
+
+\chapter{Numbser Systems}
+\section{Digital representations}
+\begin{parag}{Introduction}
+    \begin{itemize}
+        \item In mathematics, a \important{tuple} is a finite ordered sequence of elements. 
+        \begin{itemize}
+            \item An \important{n-tuple} is a tuple of $n$ elements, where $n$ is a nonnegative integer
+        \end{itemize}
+        \item In a \important{digital representation}, a number is represented by an \important{ordered n-tuple}
+        \begin{itemize}
+            \item Each element of the n-tuple is called a \important{digit} 
+            \item The n-tuple is called a \important{digit vector} (or string of digits)
+            \item The number of digits $n$ is called the \important{precision} of the representation
+        \end{itemize}
+    \end{itemize}
+\end{parag}
+\section{Representation of nonnegative integers}
+\begin{parag}{Integer Digit-Vector}
+    \begin{itemize}
+        \item \important{Digit-vector (string)} representing the integer $x$ is denoted by:
+        \[X = (X_{n-1}, X_{n-2}, \dots, X_1, \overbrace{X_0}^{\text{zero-origin}})\]
+        We see here that it is a leftward-increasing indexing
+        \item \important{Least-significant} digit (also called low order digit): $X_0$
+        \item \important{Most-significant} digit (also called high-order digit): $X_{n-1}$
+    \end{itemize}
+\end{parag}
+\begin{parag}{Elements of a number System}
+    \[X = (X_{n-1}, X_{n-2}, \dots, X_1, X_0)\]
+    \begin{itemize}
+        \item The number system to represent the integer $x$ consists of
+        \begin{itemize}
+            \item the number of \important{digits} n
+            \item A set of numerical \important{values} for the digits
+            \begin{itemize}
+                \item if a \important{set of values for a digit} $X_i$ is $D_i$, the cardinality of $D_i$ is $|D_i|$
+            \end{itemize}
+            \item A rule of interpretation
+            \begin{itemize}
+                \item Mapping between the set of digit-vector values and the set of integers
+            \end{itemize}
+            \item \important{Set size}
+            \begin{itemize}
+                \item The set of integers is a finite set of at most $K$ elements
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+    \begin{formule}
+    \[K = \Pi_{i = 0}^{n-1} |D_i|\]
+    \end{formule}
+\end{parag}
+\begin{parag}{Example: Decimal number system}
+    \[X = (X_{n-1}, X_{n-2}, \dots, X_1, X_0)\]
+    \begin{itemize}
+        \item Number of digits $n$
+        \begin{itemize}
+            \item Can be any, but let us consider $n = 6 (e.g., 17, 9899, 676799, \dots)$
+            \item Leading zeros are irrelevant
+        \end{itemize}
+        \item Digit set in decimal number system
+        \begin{itemize}
+            \item $D_i = \{0, 1, 2, \dots, 9\}$ of cardinality $10$
+        \end{itemize}
+        \item The correponding set size of $K$ is one million values, from $0$ to $K-1$
+        \begin{itemize}
+            \item $K = \prod_{i = 0}^{n-1} 10 = 10^6$
+        \end{itemize}
+    \end{itemize}
+\end{parag}
+\begin{parag}{(Non)Redundant Number systems}
+    \begin{itemize}
+        \item A number system is \important{nonredundant} if ...
+        \begin{itemize}
+            \item ... each digit-vector represents a \important{different} integer
+            \item E.g., the decimal system is nonredundant as every number is unique
+        \end{itemize}
+        \item Alternatively, a number system is \important{redundant} if ...
+        \begin{itemize}
+            \item ... there are integers represented by \important{more than one} digit-vector
+        \end{itemize}
+    \end{itemize}
+\end{parag}
+\begin{parag}{Weighted (Positional number systems}
+    \begin{itemize}
+        \item Most frequently used number systems are \important{weighted systems}
+        \item The rule of representation:
+        \[x = \sum_{i = 0}^{n-1} X_i W_i\]
+        Where $W = (W_{n-1}, W_{n-2}, \dots, W_1, W_0)$ is the \important{weight-vector} of size $n$
+        \item Equivalent formulation:
+        \[x = X_{n-1}W_{n-1} + X_{n-2}W_{n-2} + \cdots + X_1W_1 + X_0 W_0\]
+    \end{itemize}
+\end{parag}
+\begin{parag}{Example_ Decimal Number system}
+    \begin{itemize}
+        \item Weights are a power of $10$. Example:
+        \begin{itemize}
+            \item Digit Vector $X = (8, 5, 4, 6, 0, 3)$
+            \item Weight vector $W = (10^5, 10^4, 10^3, 10^2. 10^1, 10^0)$
+        \end{itemize}
+    \end{itemize}
+    $x = 8 \cdot 10^5 + 5 \cdot 10^4 + 4\cdot 10^3 + 7 \cdot 10^2 + 0 \cdot 10^1 + 3 \cdot 10^0$
+    \\
+    $x = 854703_{10}$
+    \begin{itemize}
+        \item When weights are of the format
+        \begin{itemize}
+            \item $W_0 = 1$ and 
+            \item $W_i = W_{i-1}R_{i-1}, \; \; i \leq i \leq n-1$
+        \end{itemize}
+    \end{itemize}
+    We have a \important{radix number system}
+\end{parag}
+\begin{parag}{Radix number system}
+    \begin{definition}
+        Radix number systems are weighted number system in which the weight vector is related to the \important{radix vector} $R = (R_{n-1}, R_{n-2}, \dots, R_1, R_0)$ as follows:
+        \[W_0 = 1; \; W_i = W_{i-1}R_{i-1}, \; 1 \leq i \leq n-1\]
+    \end{definition}
+    \begin{itemize}
+        \item Equivalent to
+        \[W_0 = 1; \; W_i = \prod_{j=0}^{i-1} R_j\]
+        \item E.g., in the decimal number system $W_0 = 1; W_i = \prod_{j = 0}^{i-1} 10$
+    \end{itemize}
+    \begin{subparag}{Fixed- and Mixed-Radix number systems}
+        \begin{itemize}
+            \item In a \important{fixed-radix} system, all elements of the radic-vector have the same value \important{r (the radix)}
+            \item The weight vector in a fixed-radix system:
+            \[W = (r^{n-1}, r^{n-2}, \dots, r^2, r^1, 1)\]
+            and the integer $x$ becomes 
+            \[x = \sum_{i = 0}^{n-1} X_i \cdot r^i\]
+        \end{itemize}
+    \end{subparag}
+    \begin{subparag}{Example}
+        \begin{itemize}
+            \item Characteristics of the decimal number system:
+            \begin{itemize}
+                \item Radix $r = 10$
+                \item \textbf{Fixed-radix} system
+            \end{itemize}
+        \end{itemize}
+    \end{subparag}
+\end{parag}
+\begin{parag}{Binary/Octal/Hexadecimal to/from Decimal}
+I won't really go into the details here but the main thing to know is to convert from a system to one another (with the most famous ones)
+\end{parag}
+\section{Representation of signed Integers}
+\begin{parag}{Sign-and-Magnitude (SM)}
+    \begin{itemize}
+        \item A signed integer $x$ is represented by a pair
+        \[(x_s, x_m)\]
+        where $x_s$ is the \important{sign} and $x_m$ is the \important{magnitude} (positive integer)
+        \item Sign (positive, negative) is represented by a binary bariables 
+        \begin{itemize}
+            \item $0 \implies$ positive; $1 \implies $ negative
+        \end{itemize}
+        \item Magnitude can be represented as any positive integer
+        \begin{itemize}
+            \item In a conventional radix-r system, the range of n-digit magnitude is :
+            \[0 \leq x_m \leq r^n - 1\]
+        \end{itemize}
+    \end{itemize}
+\end{parag}
