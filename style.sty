@@ -8,7 +8,7 @@
 \usepackage{fontspec}
 % \usepackage[utf8]{inputenc}  % useless for LuaLaTex
 \usepackage[bottom=2.5cm, top=2.5cm]{geometry}
-\setlength{\columnsep}{0.5cmcm}
+\setlength{\columnsep}{0.5cm}
 \usepackage{fancyhdr}
 \usepackage{lmodern}
 \usepackage{microtype}
@@ -107,16 +107,12 @@
 \newcommand{\bmath}[0]{\mathcal{B}}
 \newcommand{\cmath}[0]{\mathcal{C}}
 \newtheorem{savoir}{Truc}
-\newenvironment{truc}{
-    \begin{mdframed}[backgroundcolor=orange!7,
-    linecolor=orange!20, linewidth=1pt]\begin{savoir}}
-    {\end{savoir}\end{mdframed}}
 
 
 % Définir un environnement mdframed spécifique pour les remarques
 \newenvironment{framedremark}
-  {\begin{mdframed}[backgroundcolor=orange!7, linecolor=orange!20, linewidth=1pt]\begin{remark}}
-  {\end{remark}\end{mdframed}}
+  {\begin{mdframed}[backgroundcolor=orange!7, linecolor=orange!20, linewidth=1pt]}
+  {\end{mdframed}}
 
 
 \newtheorem{resume1}{Résumé}
