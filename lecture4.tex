@@ -1,0 +1,277 @@
+\lecture{4}{2025-02-28}{Arithmetic operation}{}
+
+\begin{parag}{Difference between Fixed and Floating point representation}
+    In a fixed point representation, the " \textit{distance}" between each point is fixed, on the other and When using Floating point representation, this distance isn't fixed it is \important{floating}. The reason for this is the definition of the floating point representation:
+    \begin{align*}
+        X = (SE_{m-1}E_{m-2} \dots E_1 E_0 M_{n-1}M_{n-2} \dots M_0) \\
+        x = (-1)^S \times M \times b^E
+    \end{align*}
+    As you can see, the number can be much more precise as it goes near zero.
+\end{parag}
+
+\subsection{Arithmetic operations}
+\begin{parag}{Fixed-Point arithmetic}
+    Performing $+$ or $-$ on two binary numbers $x(m, f)$ and $y(m, f)$ is done \important{the same way} as if the operands were integers.
+    \begin{itemize}
+        \item Overflow can happen
+    \end{itemize}
+
+    \begin{subparag}{Example}
+        (Slide 11) 
+        If I forgot to put the screenshot here is the example:
+        \\
+        \begin{align*}
+            X &= 000101.110_2 = 5.75_{10} \\
+            Y &= 001100.011_2 = 12.375_{10}
+        \end{align*}
+        And we want to sum up these two number, 
+        \begin{align*}
+            00101.110 \\
+         +   001100.011 \\
+        \end{align*}
+        We begin at the right, $0 + 1 = 1$ , $X + Y = ??????.??1$ then $1 + 1 = 10$ there for we put a $0$ and carry it over, $X + X = ??????.?01$, then carry$ + 1 + 0 = 10$ same method at the next index so $X + Y = ?????0.001$ then we get the carry alone, $ \dots$ and we end up with $010010.001 = 18.125$
+    \end{subparag}
+
+    \begin{subparag}{Personal remark}
+        \begin{framedremark}
+            It is the same way because we are always adding power of the $2$ event when we are in the " \textit{fractional world}" it is still power of two. We also do the same with decimal number in base 10.
+        \end{framedremark}
+    \end{subparag}
+\end{parag}
+
+\begin{parag}{Two's Complement}
+    For the two's complement the formula is:
+    \begin{align*}
+        x \pm y = \left( -X_{(m_x - 1)}2^{(m_x - 2)} + \sum_{i = -f_x}^{m_x - 2} X_i2^i \right ) \pm \left( -Y_{(m_y-1)}2^{(m_y - 1)} + \sum_{i=-f_y}^{m_y - 2} Y_i 2^i \right)
+    \end{align*}
+    The largest integer-part exponent: max$(m_x - 1, m_y - 1)$ Consequently $m_{ x \pm y} = \text{max}(m_x, m_y) + 1$\\
+    The smallest fractional part exponent: min$(-f_x, -f_y)$ Consequently $f_{x \pm y} = \text{max}(f_x, f_y)$
+    \\
+    $m_{x \pm y}$ is the number of bits for the integer component that is needed (usual addition), same thing for the $f_{x \pm y}$
+
+\end{parag}
+
+
+\subsubsection{Fixed Point arithmetic Multiplication}
+
+\begin{parag}{Introduction}
+For the multiplication on two binary numbers $x(m, f)$ and $y(m, f)$, we use the same algorithm as if the operands were integers but, the \important{binary point location changes}. 
+\\
+In two's complement:
+\begin{align*}
+    x \cdot y = \left(-X_{m-1} 2^{m-1} + \sum_{i = -f}^{m-2} X_i2^i \right) \cdot \left( -Y_{m-1}2^{m-1} + \sum_{i = -f}^{m-2} Y_i2^i \right)
+\end{align*}
+The largest integer-part exponent $(m-1) + (m-1)$ Consequently $m_{xy} = 2m$ \\
+The smallest fractional-part exponent: $(-f) + (-f)$ Consequently $f_{xy} = 2f$ 
+
+\end{parag}
+
+\begin{parag}{Generalization}
+    Multiple on two binary numbers $x(m_x, f_x)$ and $y(m_y, f_y)$
+    \begin{align*}
+        x \cdot y = (x_{int} + x_{fr} ) \cdot (y_{int} + y_{fr})
+    \end{align*}
+    In two's complement:
+    \begin{align*}
+        x \cdot y = \left( -X_{m_x} 2^{m_x - 1} + \sum_{i=-f_x}^{m_x - 2} X_i 2^i \right) \cdot \left( -Y_{m_y- 1}2^{m_y - 1} + \sum_{i = -f_y}^{m_y-2} Y_i 2^i \right)
+    \end{align*}
+    \begin{itemize}
+        \item $m_{xy} = m_x + m_y$
+    \item $f_{xy} = f_x + f_y$
+
+    \end{itemize}
+    \begin{subparag}{Example: Analogy with Decimal numbers}
+        let us take for example 
+        \begin{itemize}
+            \item $9.99$ $m_x = 1, f_x = 2$
+            \item $999.9999$, $m_y = 3$, $f_x = 4$
+        \end{itemize}
+        If we take the multiplication:
+        \begin{align*}
+            9989.999001 \text{ } \; \; \; m_{xy} = 1 + 3 = 4; f_{xy} = 2 + 4 = 6
+        \end{align*}
+    \end{subparag}
+    \begin{subparag}{Example}
+        For example if we take two number with the format, 
+        \begin{itemize}
+            \item $m_x = m_y = 3$ 
+            \item $f_x = f_y = 2$
+        \end{itemize}
+    and $X = 010.11$,$Y = 011.01$. (screenshot slide 17)
+    \\
+    To explain it in spoken English we do it as a loop of addition without the format (like it is integer) and then with the result, we convert it to fixed-point.
+    \begin{framedremark}
+        We have to be careful here to not forget to change the format ($m_{xy} = m_x + m_y \dots)$.
+    \end{framedremark}
+    \end{subparag}
+\end{parag}
+
+\begin{parag}{Pros and cons of fixed Point representation}
+    \important{Pros}
+\begin{itemize}
+    \item Arithmetic operations on integers can be applied to fixed-point numbers without modifications
+        \begin{itemize}
+          \item  Portable: we can reuse the same inetger processing hardware
+          \item Like with intgers, arithmetic operations are performed efficiently (fast)
+             \item Used in image and signal processing and communication
+        \end{itemize}
+   
+\end{itemize}
+\important{Cons}
+\begin{itemize}
+    \item Complex data and algorithm analysis
+        \begin{itemize}
+            \item Where to put the binary point to maximize accuracy
+        \end{itemize}
+    \item There are other number formats, namely floating-point, that provide more extensive dynamic range and better precision
+\end{itemize}
+\end{parag}
+
+
+\subsubsection{Floating-Point Arithmetic}
+\begin{parag}{Addition/Subtraction}
+    Let $x$ and $y$ be represented as $(S_x, M_x, E_x)$ and $(S_y, M_y, E_y)$
+    \begin{itemize}
+        \item The significands $M^* = (-1)^SM$ are normalized
+    \end{itemize}
+    Addition/subtraction result is $z$, also represented as $(S_z, M_z, E_z)$:
+    \begin{align*}
+        z = x \pm y = M_x^* \times 2^{E_x} \pm M_y^* \times 2^{E_y}
+    \end{align*}
+    The significand of the result is also normalized:
+    \begin{align*}
+        z = M_z^* \times 2^{E_z}
+    \end{align*}
+\end{parag}
+
+\begin{parag}{Steps}
+    Four main steps to compute and produce the result $+/-$
+    \begin{itemize}
+        \item Add/substract significand and set exponent \\
+            The significand of the number with the \textbf{smaller} exponent has to be multiplied by two to the power of the difference between the exponents (this operation is called \important{alignment}) and the added/subtracted to the other significand
+            \begin{align*}
+                M_z^* \begin{cases}
+                    (M_x^* \pm (M_y^* \times 2^{(E_y - E_x)})) \times 2^{E_x} \text{ if } E_x \geq E_y \\
+                    ((M_x^* \times 2^{(E_x - E_y)}) \pm M_y^* ) \times 2^{E_y} \text{ if } E_x < E_y
+                \end{cases} \\
+                E_z = \text{max}(E_x, E_y)
+            \end{align*}
+        \item Normalize the result and update the exponent, if required 
+             \item Round the result, normalize, and adjust exponent, if required
+             \item Set flags for special values, if required
+    \end{itemize}
+
+\end{parag}
+
+
+\begin{parag}{Recap}
+\begin{itemize}
+    \item Recal Step 1: Add/substract significand and set exponent
+    \item Algorithm
+        \begin{itemize}
+            \item Substract exponents $d = E_x - E_y$
+            \item Align significands
+                \begin{itemize}
+                    \item Compare the exponents of the two operands
+                    \item shift right $d$ positions the significand of the operand with the smallest exponent
+                    \item Select as the exponent of the result the largest exponent
+                \end{itemize}
+            \item Add/subtract signed significands and produce the sign of the result
+        \end{itemize}
+\end{itemize}
+\end{parag}
+
+
+\subsection{Floating Point +/-}
+\begin{parag}{Normalization}
+    Various situations may occur
+    \begin{itemize}
+        \item Scenario 2: When the effective operation is an \important{addition}, the significand might \important{overflow}. Steps to perform normalization:
+            \begin{itemize}
+                \item Shift right the significand one position
+                \item Increment the exponent by one
+            \end{itemize}
+        \item Example:
+    \end{itemize}
+    \begin{align*}
+        1.1001111\\
+        + \; 0.0110110 \\
+        = 10.0000101
+    \end{align*}
+    Normalization 
+    \begin{enumarate}
+    \item Shift right $>> 1$
+    \item Increment the exponent $E = E + 1$
+    \end{enumarate}
+
+    
+
+\end{parag}
+
+
+
+
+\begin{parag}{Rounding}
+    The intermediate result may not be representable with the given format, in this case we perform a rounding.
+    \begin{itemize}
+        \item Towards zero: truncate the lsb
+        \item Twords $ \pm \infty$ : requires addition
+        \item To nearest: require addition
+    \end{itemize}
+
+\end{parag}
+
+\begin{parag}{Tie to even}
+    The $FP$ result is as close as possible to the exact value:
+    \begin{itemize}
+        \item Minimized rounfoff error (default rounding mode in $IEEE$ $754$)
+        \item Tie to even is preferred because it leads to smaller error when the result is divided by two -a frequent operation
+    \end{itemize}
+    Assuming as significand of infinite precision and radix $r$, round to the nearest can be obtained by \important{adding} ($ \frac{r^{-f}}{2}$) to the infinite precision significandd and keeping the resulting $f$ fractional digits
+    \begin{itemize}
+        \item In case of overflow: normalization and the exponent update are needed
+    \end{itemize}
+
+\end{parag}
+
+\begin{parag}{Max round-off Error}
+    Rounding to nearest. $f$ fractional digits. What is the maximumm difference between the exact value and its $FP$ representation?
+    \\
+    \begin{align*}
+        d_{max} = \frac{2^{-f}}{2} \times 2^{E_{max}}
+    \end{align*}
+    
+
+\end{parag}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
