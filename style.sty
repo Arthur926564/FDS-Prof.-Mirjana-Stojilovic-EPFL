@@ -5,7 +5,6 @@
 % ===== Packages for general functionalities =====
 \usepackage[french]{babel}
 \usepackage[T1]{fontenc}
-\usepackage{fontspec}
 % \usepackage[utf8]{inputenc}  % useless for LuaLaTex
 \usepackage[bottom=2.5cm, top=2.5cm]{geometry}
 \usepackage{fancyhdr}
@@ -26,6 +25,7 @@
 \usepackage{dsfont} % for \mathds{1}
 
 % ===== Packages for pictures =====
+
 \usepackage{svg}  % For \includesvg command (needs -shell-escape when compiling and inkscape)
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
@@ -43,8 +43,6 @@
 
 \usepackage[super]{nth}  % for the \nth command
 \usepackage{centernot}  % for \centernot command
-\usepackage{emoji}  % absolutely mandatory
-\setemojifont{Twemoji Mozilla}  % This must be installed, see: https://github.com/mozilla/twemoji-colr (you only need to install and execute the TTF file from the release section)
 
 % ===== Packages for useful environments =====
 \usepackage{tabularx}  % tabular environments which allow line breaking
@@ -181,15 +179,6 @@ linewidth=1pt]\begin{pro}}
 
 
 
-% #########################################################################################################
-% ######################################### Joachim Favre's style #########################################
-% #########################################################################################################
-% ##### You need to compile a latex document using this style with LuaLaTeX, since it uses the        #####
-% ##### luacode package and the luaexec command.                                                      #####
-% #########################################################################################################
-% ##### You may require to install Mozilla Twemoji, see https://github.com/mozilla/twemoji-colr       #####
-% ##### You only need to download and execute the TTF file from their release section on GitHub.      #####
-% #########################################################################################################
 
 % ##### Table of contents (you can search for the items using " [number]. ") #####
 % 01. Includes

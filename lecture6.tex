@@ -1,0 +1,202 @@
+\lecture{6}{2025-03-06}{Introduction to logic circuits}{}
+    \section{Digital circuit}
+    
+\begin{parag}{Introduction}
+    Logic circuits is the foundations of digital systems. In smartphones, computers, control systems, digital communication devices, ...\\
+    The smallest unit of digital information is one bit, represented as a binary value \important{0 and 1}. \\
+    In a binary logic circuit, the electrical signals are constrained to two discrete values. \\
+    The key to binary circuits dominance is \important{simplicity}. In practice, the two discrete values are implemented as voltage levels (the supply voltage or the ground).
+\end{parag}
+
+\begin{parag}{Two states of a switch}
+    If controlled by an \important{input variable} $x$, the switch is open if $x = 0$ and closed if $x = 1$.
+\end{parag}
+
+\begin{parag}{Symbol}
+    The symbol for a switch controlled by an input variable:
+\end{parag}
+
+\begin{parag}{Analyses of a logic Network}
+    Example logic network \\
+    The sequence of input value in the truth table visualized in the network. Any sequence can be visualized in a \important{timing diagram}.
+\end{parag}
+
+\begin{parag}{Cost of logic circuit}
+    The total cost of a logic circuit is typically defined as the total \textbf{number if gates} \important{plus} the total \textbf{number of gates input}
+    \begin{itemize}
+        \item Each logic gate (AND, OR, NOT, etc) contributes to the cost
+        \item More inputs to gates often mean larger, more costly gates
+        \item in simplified cost models, weights may be assigned to different types of gates, depending on their complexity or physical implementation.
+    \end{itemize}
+
+\end{parag}
+
+\begin{parag}{Functionally Equivalent Networks}
+    A logic function can be implemented with a variety of different logic networks of different cost:
+    \begin{align*}
+        f(x) = \overline{x_1} + x_1x_2 = \overline{x_1} + x_2 = g(x) 
+    \end{align*}
+    The above two networks are functionally \important{equivalent}
+
+    
+
+\end{parag}
+\begin{parag}{How to check for Equivalence}
+    \begin{align*}
+        f(x_1, \dots, x_n) = g(x_1, \dots, x_n), \forall x_1, x_n
+    \end{align*}
+    Two logic networks are equivalent if:
+    \begin{itemize}
+        \item Their \important{truth tables} are the same
+        \item There exists a sequence of algebraic manipulation to transform one logic expression to the other (these algebraic manipulations are defined as \important{Boolean algebra}
+        \item Their \important{Venn diagrams} are the same
+    \end{itemize}
+    
+\end{parag}
+\begin{parag}{How to find the best equivalent network}
+    Logic function can be implement with a variety of different networks. How does one find the best (simplest, least costly)
+    \\
+    The process of finding the best equivalent logical expression describing a logic network is called \important{minimization}
+    \begin{itemize}
+        \item \important{Approach 1}: Apply a sequence of algebraic transformation
+            \begin{itemize}
+                \item Now always abvious when to apply which transformation, tedious, impractical
+            \end{itemize}
+        \item \important{Approach 2}: Use \important{Karnaugh maps} (an alternative to the truth table)
+            \begin{itemize}
+                \item Simpler, but quickly becomes unmanageable by hand (up to 4 inputs acceptable)
+            \end{itemize}
+        \item \important{Approach 3} (the winner) Automated techniques in synthesis software tools
+    \end{itemize}
+\end{parag}
+\subsection{Boolean algebra}
+\begin{parag}{A bit of history}
+    In 1849 George Boole published a scheme for the algebraic description processes involved in logical thought and reasoning. This scheme and its refinements became know as Boolean algebra \\
+    It the late 1930s, Claude Shannon showed hat Boolean algebra provides an effective means of describing circuits built with switches, therefore, Boolean algebra can be used to describe logic circuits. Boolean algebra is a powerful technique for designing and analyzing logic circuits; it is the foundation for our modern digital technology,
+
+\end{parag}
+\begin{parag}{Axioms}
+    Like any algebra, Boolean algebra is based on a set of rules derived from a small number of basic assumptions (i.e., \important{axioms}). Let us assume that boolean algebra involves the following axioms are true:
+    \begin{enumerate}
+    \item 
+        $0 \cdot 0 = 0 $\\
+        $1 + 1 = 1$
+\item 
+   $ 1 \cdot 1 = 1$ \\
+   $ 0 + 0 = 0$
+\item 
+    $0 \cdot 1 = 0 \cdot 1 = 0 $\\
+$    1 + 0 = 0 + 1 = 1$
+\item 
+$        \text{ if } x = 0, \text{ then } \overline{x} = 1 $\\
+ $       \text{ if } x = 1, \text{ then } \overline{x} = 0$
+    \end{enumerate}
+    
+    From the axioms, we can define some rule (i.e., \textbf{theorems}) for dealing with single boolean variables
+
+\end{parag}
+
+\begin{parag}{Single variable theorems}
+    If $x$ is a variable, then the following theorems hold:
+    \begin{enumerate}
+    \item 
+$        x \cdot0 = 0 $\\
+ $       x + 1 = 1$
+\item 
+     $x \cdot 1 = x $\\
+$     x + 0 = x$
+\item
+    $x \cdot x = x$ \\
+$    x + x = x$
+ \item 
+$         x \cdot \overline{x} = 0$ \\
+ $        x + \overline{x} = 1$
+  \item 
+$          \overline{\overline{x}} = x $
+    \end{enumerate}
+    Theorems grouped in pairs, emphasizing the \important{principle of duality}.
+    \\
+    \textbf{Dual Form} is obtained by replacing all $+$ operators with $ \cdot$ operators, and vice versa; and by replacing all $0$s with $1$s, and vice versa. \\
+    To prove the theorems, apply \important{perfect induction} (i.e., substitute the variable with $1$ or $0$) and use the axioms.
+\end{parag}
+
+\begin{parag}{Two and three variable propreties}
+    Given three Boolean variables, the following properties hold:
+    \begin{itemize}
+        \item Commutative 
+ $           x \cdot y = y \cdot x $\\
+$            x + y = y + x$
+
+    \item Associative: 
+$        x \cdot (y \cdot z ) = (x c. y )  \cdot z $\\
+ $       x + ( y + z) = ( x + y) + z$
+    
+\item Distributive: 
+   $ x \cdot (y + z) = x \cdot y + x \cdot z $\\
+$    x + y \cdot z = (x + y) \cdot (x + z)$
+
+    \end{itemize}
+  
+\end{parag}
+\begin{parag}{Example}
+    Let us prove the validity of the following logic equation:
+    \begin{align*}
+        (x_1 + x_3) ( \overline{x_1} + \overline{x_3}) = x_1 \overline{x_3} + \overline{x_1}x_3
+    \end{align*}
+
+    Let us manipulate the left hand side:
+    \begin{align*}
+        (x_1 + x_3)( \overline{x_1} + \overline{x_3}) &= (x_1 + x_3) \overline{x_1} + (x_1 + x_3) \overline{x_3}\\
+    &= x_1 \overline{x_1} + x_3 \overline{x_1} + x_1 \overline{x_3} + x_3 \overline{x_3} \\
+    &= 0 + x_3 \overline{x_1} + x_1 \overline{x_3} + 0 \\
+    &= x_1 \overline{x_3} + \overline{x_1}x_3
+    \end{align*}
+\end{parag}
+\begin{parag}{Purpose}
+    The purpose of the axioms, theorems, and properties in Boolean Algebra is to perform algebraic transformation to do:
+    \begin{itemize}
+        \item \important{Check for equivalence}, Find if two logical expressions (i.e., logical circuits made of gates) are equivalent (i.e., perform the same functionality) without evaluating all input possibilities
+        \item \important{Design efficient circuits} Simplify the logical expression to find a potentially more efficient equivalent variant (i.e., design a circuit of the same desires functionality but with fewer gates)
+    \end{itemize}
+\end{parag}
+
+\begin{parag}{Two and three variable properties:}
+    Given three boolean variable, the following properties hold:
+    \begin{itemize}
+        \item Absorption: $x + x \cdot y = x$ \\ $x \cdot (x + y) = x$
+        \item Combining $ x \cdot y + x \cdot \overline{y} = x$ \\ $ (x + y) \cdot (x + \overline{y}) = x$
+        \item DeMorgan's theorem: $ \overline{x \cdot y} =  \overline{x} + \overline{y}$ \\ $\overline{x + y} = \overline{x} \cdot \overline{y}$ 
+        \item Redundancy: $x + \overline{x} \cdot y = x + y$ \\ $x \cdot ( \overline{x} + y)  =  x \cdot y$
+        \item Consensus: $x \cdot y + y c. z + \overline{x} \cdot z = x \cdot y = \overline{x} \cdot z$ \\ $(x + y) \cdot (y + z) \cdot ( \overline{x} + z) = (x + y) \cdot ( \overline{x} + z)$
+    \end{itemize}
+    \begin{subparag}{Proof}
+        For example let us prrof the validity  of the following logic equation:
+        \begin{align*}
+            x_1 \overline{x_3} + \overline{x_2} \overline{x_3} + x_1x_3 + \overline{x_2}x_3 = \overline{x_1} \overline{x_2} + x_1x_2 + x_1 \overline{x_2}
+        \end{align*}
+        Use the left hand side for the manipulation:
+        \begin{align*}
+            x_1 \overline{x_3} + \overline{x_2} \overline{x_3} + x_1x_3 + x_1x_2 + \overline{x_2}x_3 &= x_1 \overline{x_3} + x_1x_3 + \overline{x_2} \overline{x_3} + \overline{x_2}x_3 \\
+                                                                                                     &= x_1( \overline{x_3} + x_3) + \overline{x_2}( \overline{x_3} + x_3) \\
+                                                                                                     &= x_1 \cdot 1 + \overline{x_2} \cdot 1 \\
+                                                                                                     &= x_1 + \overline{x_2}
+        \end{align*}
+    \end{subparag}
+\end{parag}
+\subsection{The Venn Diagram}
+\begin{parag}{Introduction}
+    Venn Diagram provides a graphical illustration of various operations and relations in the algebra of sets. Popularized by John Venn (1834-1923) in the 1880s.
+\end{parag}
+\begin{parag}{Shades and Contours}
+    In the diagram, the elements of a set are represented by the area enclosed by a \important{contour of a circle}. \\
+\begin{itemize}
+    \item  Shaded area where the \textbf{logical function} value $=$ binary $1$
+    \item The area within the contour: \textbf{variable} value = binary1 
+    \item The area outside the contour \textbf{variable} value = binary $0$
+\end{itemize}
+\begin{subparag}{Simple intersection}
+    Reminder: The union of the shaded areas corresponds to the logical expression (shaded when the expression is binary $1$)
+\end{subparag}
+\end{parag}
+
+

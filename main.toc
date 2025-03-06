@@ -1,4 +1,4 @@
-\babel@toc {french}{}
+\babel@toc {french}{}\relax 
 \contentsline {chapter}{\numberline {1}Numbser Systems}{7}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Digital representations}{7}{section.1.1}%
 \contentsline {paragraph}{Introduction}{7}{section*.3}%
@@ -82,3 +82,33 @@
 \contentsline {paragraph}{Rounding}{26}{section*.67}%
 \contentsline {paragraph}{Tie to even}{26}{section*.68}%
 \contentsline {paragraph}{Max round-off Error}{26}{section*.69}%
+\contentsline {subsection}{\numberline {1.6.4}Not in the course}{27}{subsection.1.6.4}%
+\contentsline {paragraph}{Exponential Growh}{27}{section*.71}%
+\contentsline {paragraph}{Challenges and limitations}{27}{section*.72}%
+\contentsline {paragraph}{Low Precision Compute}{27}{section*.73}%
+\contentsline {paragraph}{Properties of low precision compute}{27}{section*.74}%
+\contentsline {paragraph}{Block Floating Point}{27}{section*.75}%
+\contentsline {paragraph}{Block floating point is only the beginning}{28}{section*.76}%
+\contentsline {subsection}{\numberline {1.6.5}Point arithmetic}{28}{subsection.1.6.5}%
+\contentsline {paragraph}{Fixed Point arithmetic Addition(substraction in two's complement}{28}{section*.77}%
+\contentsline {paragraph}{Multiplication (Fixed Point)}{28}{section*.78}%
+\contentsline {section}{\numberline {1.7}Digital circuit}{29}{section.1.7}%
+\contentsline {paragraph}{Introduction}{29}{section*.80}%
+\contentsline {paragraph}{Two states of a switch}{29}{section*.81}%
+\contentsline {paragraph}{Symbol}{29}{section*.82}%
+\contentsline {paragraph}{Analyses of a logic Network}{29}{section*.83}%
+\contentsline {paragraph}{Cost of logic circuit}{29}{section*.84}%
+\contentsline {paragraph}{Functionally Equivalent Networks}{29}{section*.85}%
+\contentsline {paragraph}{How to check for Equivalence}{29}{section*.86}%
+\contentsline {paragraph}{How to find the best equivalent network}{29}{section*.87}%
+\contentsline {subsection}{\numberline {1.7.1}Boolean algebra}{30}{subsection.1.7.1}%
+\contentsline {paragraph}{A bit of history}{30}{section*.88}%
+\contentsline {paragraph}{Axioms}{30}{section*.89}%
+\contentsline {paragraph}{Single variable theorems}{30}{section*.90}%
+\contentsline {paragraph}{Two and three variable propreties}{31}{section*.91}%
+\contentsline {paragraph}{Example}{31}{section*.92}%
+\contentsline {paragraph}{Purpose}{31}{section*.93}%
+\contentsline {paragraph}{Two and three variable properties:}{31}{section*.94}%
+\contentsline {subsection}{\numberline {1.7.2}The Venn Diagram}{32}{subsection.1.7.2}%
+\contentsline {paragraph}{Introduction}{32}{section*.95}%
+\contentsline {paragraph}{Shades and Contours}{32}{section*.96}%

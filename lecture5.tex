@@ -1,0 +1,109 @@
+\lecture{5}{2025-03-03}{Low precision Compute}{}
+
+\subsection{Not in the course}
+\begin{parag}{Exponential Growh}
+Ai is taking on an increasingly important role. Deep neural Networks are the most widespread.
+\begin{itemize}
+    \item E.g, Large models (LLM) generate human-like content
+\end{itemize}
+The challenge with those LLM is their size, GPT3 has 175 \important{Billion} parameters.\\
+Larg models mean a lot of data, any computations and a fast result.
+\end{parag}
+\begin{parag}{Challenges and limitations}
+    What is the pros and cons of formats:
+    \\
+    32-bits or 64 bit floating-point formats:
+    \begin{itemize}
+        \item (-) Arithmetic unit are large (many bits $ \implies$ high area, high energy
+        \item (-) We can put fewer units per chip (e.g, less compute power in GPU)
+           \begin{itemize}
+               \item Poor arithmetic density (in number of ops/1mm$^2$)
+               \item Fewer units, fewer computations
+           \end{itemize}
+       \item (+) The model predictions are accurate, but it takes a long time to compute them
+    \end{itemize}
+    Fixed Point or integer format:
+    \begin{itemize}
+        \item (+) Arithmetic units are smaller and faster ($\sim 10 \times$ area savings)
+        \item (+) Better arithmetic density and lower delays
+        \item (-) The error due to limited dynamic range are too significant for most ML models; The accuracy of their predictions suffers
+    \end{itemize}
+\important{New number formats are needed}: The best of both world
+\end{parag}
+
+\begin{parag}{Low Precision Compute}
+    \begin{subparag}{Idea}
+        The idea is to replace the 32 bits or 64 bit $FP$ number traditionaly used for machine learning with reduced precision formats derived from the floating point representation
+    \end{subparag}
+    Build new, specialized hardware to accelerate ML training ( \important{application domain specific} hardware)
+\end{parag}
+\begin{parag}{Properties of low precision compute}
+    Advantages:
+    \begin{itemize}
+        \item Fit more numbers in memory (larger datasets, larger models)
+        \item Move (read/write) more number per second
+        \item Compute faster by using more arithmetic circuit in parallel 
+        \item Energy effiency
+    \end{itemize}
+    Disadvantages:
+    \begin{itemize}
+        \item Low precision
+            \begin{itemize}
+                \item limits even more the set of number can represent
+                \item Accumulation of rounding error
+            \end{itemize}
+        \item Less accurate neural network model predictions, but acceptable
+    \end{itemize}
+
+\end{parag}
+
+\begin{parag}{Block Floating Point}
+    Imagine a block (vector) of binary numbers in $FP$. Every vector element (every number) will have its own $S/M/E$. If the exponents in the block are not too different, we could use a single \important{shared exponent} per block:
+    \begin{itemize}
+        \item \important{Block-floating point}
+    \end{itemize}
+    
+    To find which shared exponent to use in a $BFP$ format, we need to find the largest exponent in the block of $FP$ numbers. 
+    \begin{framedremark}
+        We use the largest because of the addition/substraction which works fine for every one of them if we take the largest
+    \end{framedremark}
+    This exponent will be the shared exponent $E_{block}$.
+    \\
+    Then we find the difference $d_i = E_{block} - E_i$ between the shared and each of the other exponents $E_i$ in the block.
+    \\
+    We then adjust the mantissa by shifting to the right the signed mantissa of each number by $d_i$. 
+    \begin{framedremark}
+        Because of these adjustements, mantissa in $BFP$ cannot be normalized, therefore, there is no hidden bit either.
+
+    \end{framedremark}
+    
+    
+\end{parag}
+
+
+\begin{parag}{Block floating point is only the beginning}
+    $BFP$ strikes a balance between arithmetic density (fewer bits used, less silicon/chip area) and range
+    \\
+    There are many other ideas to try,
+    \begin{itemize}
+        \item $FP/BFP$ numbers with different exponent/mantissa sizes
+        \item Fixed point numbers with nonstandars widths
+        \item Industry and academia are coming up with new $AI$-targeted version of number formats.
+    \end{itemize}
+    \important{Modern application (AI) demande innovation in computing}
+
+\end{parag}
+\subsection{Point arithmetic}
+\begin{parag}{Fixed Point arithmetic Addition(substraction in two's complement}
+    The largest integer-part exponent max$(m_x - 1, m_y - 1)$ consequently: $m_{x \pm y} = max (m_x, m_y) + 1$
+    \\
+    The smallest fractional part exponent: min$(-f_x, -f_y)$ consequently, $f_{ x \pm y} = $ max$(f_x, f_y)$
+    \begin{align*}
+        x \pm y = \left( -X_{m_x-1}2^{(m_x -1)} + \sum_{i=-f_x}^{m_x -2} X_i2^i \right) \pm \left( -Y_{m_y-1}2^{(m_y-1)} + \sum_{i = -f_y}^{m_y -2}Y_i2^i \right)
+    \end{align*}
+\end{parag}
+\begin{parag}{Multiplication (Fixed Point)}
+    \begin{align*}
+        x \cdot y = \left( -X_{m-1}2^{m-1} + \sum_{i=-f}^{m-2} X_i2^i \right) \cdot \left( -Y_{m-1}2^{m-1} + \sum_{i=-f}^{m-2}Y_i2^i \right)
+    \end{align*}
+\end{parag} 
