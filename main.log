@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.21.0 (MiKTeX 25.2) (format=lualatex 2025.3.6)  6 MAR 2025 21:59
+This is LuaHBTeX, Version 1.21.0 (MiKTeX 25.2) (format=lualatex 2025.3.6)  7 MAR 2025 19:37
  restricted system commands enabled.
  file:line:error style messages enabled.
 **main.tex
@@ -2163,7 +2163,7 @@ Package: colortbl 2024/07/06 v1.0i Color table columns (DPC)
 Package datetime2 Warning: Region `en-GB' has ignored 
 (datetime2)                the following settings:
 (datetime2)                ord=raise
- on input line 695.
+ on input line 696.
 
 \c@CurrentSlide=\count458
 \slideheight=\skip267
@@ -2517,13 +2517,27 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 
 
 
-[21])
+[21]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 4
+96.
 
-[22]
+("C:/Users/Maintenant Prêt/AppData/Local/Programs/MiKTeX/tex/latex/lm/t1lmtt.f
+d"
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+
+[22])
+
+[23]
 \openout2 = lecture4.aux
  (./lecture4.tex
 
-LaTeX Warning: Hyper reference `lecturesummary4' on page 23 undefined on input 
+LaTeX Warning: Hyper reference `lecturesummary4' on page 24 undefined on input 
 line 1.
 
 
@@ -2541,7 +2555,7 @@ Overfull \hbox (8.22716pt too wide) detected at line 46
 
 
 
-[23
+[24
 
 ]
 Package mdframed Info: mdframed works in twoside mode on input line 103.
@@ -2549,9 +2563,9 @@ Package mdframed Info: mdframed inside a box
  mdframed uses option nobreak mdframed on input line 105.
 
 
-[24]
-
 [25]
+
+[26]
 
 ./lecture4.tex:202: LaTeX Error: Environment enumarate undefined.
 
@@ -2622,11 +2636,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 238--240
 
 )
 
-[26]
+[27]
 \openout2 = lecture5.aux
  (./lecture5.tex
 
-LaTeX Warning: Hyper reference `lecturesummary5' on page 27 undefined on input 
+LaTeX Warning: Hyper reference `lecturesummary5' on page 28 undefined on input 
 line 1.
 
 Package mdframed Info: mdframed works in twoside mode on input line 67.
@@ -2637,42 +2651,42 @@ Package mdframed Info: mdframed inside a box
  mdframed uses option nobreak mdframed on input line 78.
 
 
-[27
+[28
 
 
 
 ])
 
-[28]
+[29]
 \openout2 = lecture6.aux
  (./lecture6.tex
 
-LaTeX Warning: Hyper reference `lecturesummary6' on page 29 undefined on input 
+LaTeX Warning: Hyper reference `lecturesummary6' on page 30 undefined on input 
 line 1.
 
 
 
-[29
+[30
 
 
 
 ]
 
-[30]
+[31]
 Overfull \hbox (13.65361pt too wide) detected at line 183
 []
  []
 
 
 
-[31]
+[32]
 Underfull \hbox (badness 10000) in paragraph at lines 191--193
 
  []
 
 )
 
-[32] (./main.aux (./lecture4.aux) (./lecture5.aux) (./lecture6.aux))
+[33] (./main.aux (./lecture4.aux) (./lecture5.aux) (./lecture6.aux))
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -2686,21 +2700,21 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 59896 strings out of 475506
+ 59953 strings out of 475506
  100000,2373549 words of node,token memory allocated
- 5329 words of node memory still in use:
-   8 hlist, 2 vlist, 2 rule, 1 local_par, 185 glue, 4 kern, 2 penalty, 1 margin_
-kern, 5 glyph, 1307 attribute, 155 glue_spec, 188 attribute_list, 2 shape, 4 wri
+ 5582 words of node memory still in use:
+   8 hlist, 2 vlist, 2 rule, 1 local_par, 196 glue, 4 kern, 2 penalty, 1 margin_
+kern, 5 glyph, 1384 attribute, 155 glue_spec, 199 attribute_list, 2 shape, 4 wri
 te nodes
-   avail lists: 1:2,2:9149,3:1190,4:323,5:519,6:89,7:6611,8:68,9:1187,10:21,11:4
+   avail lists: 1:2,2:9141,3:1190,4:323,5:515,6:89,7:6625,8:68,9:1187,10:21,11:4
 39,12:1
- 81050 multiletter control sequences out of 65536+600000
- 80 fonts using 5278271 bytes
+ 81096 multiletter control sequences out of 65536+600000
+ 81 fonts using 5359671 bytes
  110i,19n,120p,1951b,1421s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{C:/Users/Maintenant Prêt/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-m
-athsy.enc}{C:/Users/Maintenant Prêt/AppData/Local/Programs/MiKTeX/fonts/enc/dvi
-ps/lm/lm-mathit.enc}{C:/Users/Maintenant Prêt/AppData/Local/Programs/MiKTeX/fon
-ts/enc/dvips/lm/lm-ec.enc}{C:/Users/Maintenant Prêt/AppData/Local/Programs/MiKT
+{C:/Users/Maintenant Prêt/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-e
+c.enc}{C:/Users/Maintenant Prêt/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/l
+m/lm-mathsy.enc}{C:/Users/Maintenant Prêt/AppData/Local/Programs/MiKTeX/fonts/e
+nc/dvips/lm/lm-mathit.enc}{C:/Users/Maintenant Prêt/AppData/Local/Programs/MiKT
 eX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/Maintenant Prêt/AppData/Local/Program
 s/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}<C:/Users/Maintenant Prêt/AppData/Loc
 al/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Maintenant Prêt/A
@@ -2726,10 +2740,11 @@ ocal/Programs/MiKTeX/fonts/type1/public/lm/lmro10.pfb><C:/Users/Maintenant Pr
 êt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Mai
 ntenant Prêt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/
 Users/Maintenant Prêt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8
-.pfb>
-Output written on main.pdf (32 pages, 888269 bytes).
+.pfb><C:/Users/Maintenant Prêt/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/lm/lmtt10.pfb>
+Output written on main.pdf (33 pages, 917501 bytes).
 
-PDF statistics: 508 PDF objects out of 1000 (max. 8388607)
- 172 named destinations out of 1000 (max. 131072)
+PDF statistics: 523 PDF objects out of 1000 (max. 8388607)
+ 178 named destinations out of 1000 (max. 131072)
  240 words of extra memory for PDF output out of 10000 (max. 100000000)
 

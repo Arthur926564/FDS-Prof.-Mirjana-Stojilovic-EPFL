@@ -451,6 +451,58 @@ In the general case, for fixed-point and two's complement:
         
         
     \end{subparag}
+    \begin{subparag}{How to convert fixed-point to IEEE 754}
+        In order to do this, we need $5$ steps:
+        \begin{enumerate}
+            \item Normalize the fixed point representation by shifting the binary point to the right of leftmost
+            \item The mantissa is the entire binary string after the binary point (the mantissa stores the fractional part after the leading $1$ which is \textbf{implicit}.
+            \item Calculate the exponent bits by adding the bias of $127$ to the power of $2$
+            \item Convert exponent to unsigned binary representation
+            \item If the number is positive, the sign bit is zero, otherwise it is $1$.
+        \end{enumerate}
+        Let us see for example the number such as: $13_{10}.625$. \\
+        Firstly, we convert it to binary
+        \begin{align*}
+            13.625_{10} = 1101.101_2
+        \end{align*}
+        Now we have to normalized the binary number:
+        \begin{align*}
+            1.101101 \cdot 2^3
+        \end{align*}
+        So:
+        \begin{itemize}
+            \item Mantissa: $1.101101$ (the leading $1$ is \important{implicit} in $IEEE$ $754$).
+            \item Exponent: $3$ (since we moved the decimal point $3$ point left)
+        \end{itemize}
+        Then we compute the biased Exponent. In $IEEE\; 754$, we use a bias of $127$:
+        \begin{align*}
+            E = 3 + 127 = 130 \\
+            130_{10} = 10000010
+        \end{align*}
+        We then drop the leading $1$ from the $1.101101$, fille the rest of the bit on the right:
+        \begin{align*}
+            1011010000000000000000000000
+        \end{align*}
+        Which is the mantassima. this leads finally to:
+        \begin{align*}
+        1\overbrace{10000010}^{ \text{Exponent}} \underbrace{10110100000000000000000000000}_{ \text{Mantissa}}
+        \end{align*}
+        Which in hexadecimal:
+        \begin{align*}
+            C16C0000
+        \end{align*}
+        A cool video to understand how to convert any number to $IEEE$ $754$ format:
+        \begin{center}
+            \url{https://www.youtube.com/watch?v=RuKkePyo9zk}
+        \end{center}
+        
+        
+        
+        
+        
+
+        
+    \end{subparag}
         \end{parag}
         
         \begin{parag}{Special Values}
