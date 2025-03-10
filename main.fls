@@ -845,12 +845,6 @@ INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\colortbl
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\colortbl\colortbl.sty
 INPUT .\main.aux
 INPUT .\main.aux
-INPUT .\lecture4.aux
-INPUT .\lecture4.aux
-INPUT .\lecture5.aux
-INPUT .\lecture5.aux
-INPUT .\lecture6.aux
-INPUT .\lecture6.aux
 OUTPUT main.aux
 OUTPUT main.aux
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-cmr.cfg
@@ -999,26 +993,56 @@ INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmt
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmtt10.tfm
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmtt10.tfm
-OUTPUT lecture4.aux
-OUTPUT lecture4.aux
 INPUT .\lecture4.tex
 INPUT .\lecture4.tex
-OUTPUT lecture5.aux
-OUTPUT lecture5.aux
 INPUT .\lecture5.tex
 INPUT .\lecture5.tex
-OUTPUT lecture6.aux
-OUTPUT lecture6.aux
 INPUT .\lecture6.tex
 INPUT .\lecture6.tex
+INPUT .\lecture7.tex
+INPUT .\lecture7.tex
+INPUT .\logicgate2025-03-10.png
+INPUT .\logicgate2025-03-10.png
+INPUT .\logicgate2025-03-10.png
+INPUT .\logicgate2025-03-10.png
+INPUT .\gateAnd2025-03-10.png
+INPUT .\gateAnd2025-03-10.png
+INPUT .\gateAnd2025-03-10.png
+INPUT .\gateAnd2025-03-10.png
+INPUT .\logicgate2025-03-10.png
+INPUT .\NANDNOR2025-03-10.png
+INPUT .\NANDNOR2025-03-10.png
+INPUT .\NANDNOR2025-03-10.png
+INPUT .\NANDNOR2025-03-10.png
+INPUT .\morgantheoremgate2025-03-10.png
+INPUT .\morgantheoremgate2025-03-10.png
+INPUT .\morgantheoremgate2025-03-10.png
+INPUT .\morgantheoremgate2025-03-10.png
+INPUT .\notgatenandnor2025-03-10.png
+INPUT .\notgatenandnor2025-03-10.png
+INPUT .\notgatenandnor2025-03-10.png
+INPUT .\notgatenandnor2025-03-10.png
+INPUT .\gateAnd2025-03-10.png
+INPUT .\NANDNOR2025-03-10.png
+INPUT .\morgantheoremgate2025-03-10.png
+INPUT .\notgatenandnor2025-03-10.png
+INPUT .\gate22025-03-10.png
+INPUT .\gate22025-03-10.png
+INPUT .\gate22025-03-10.png
+INPUT .\gate22025-03-10.png
+INPUT .\gate22025-03-10.png
+INPUT .\xor2025-03-10.png
+INPUT .\xor2025-03-10.png
+INPUT .\xor2025-03-10.png
+INPUT .\xor2025-03-10.png
+INPUT .\xnor2025-03-10.png
+INPUT .\xnor2025-03-10.png
+INPUT .\xnor2025-03-10.png
+INPUT .\xnor2025-03-10.png
+INPUT .\xor2025-03-10.png
+INPUT .\xnor2025-03-10.png
 INPUT .\main.aux
 INPUT .\main.aux
-INPUT .\lecture4.aux
-INPUT .\lecture4.aux
-INPUT .\lecture5.aux
-INPUT .\lecture5.aux
-INPUT .\lecture6.aux
-INPUT .\lecture6.aux
 INPUT .\main.out
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx10.pfb
 INPUT C:\Users\Maintenant Prêt\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx10.pfb

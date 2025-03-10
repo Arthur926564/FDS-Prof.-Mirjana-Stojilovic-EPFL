@@ -112,3 +112,17 @@
 \contentsline {subsection}{\numberline {1.7.2}The Venn Diagram}{33}{subsection.1.7.2}%
 \contentsline {paragraph}{Introduction}{33}{section*.95}%
 \contentsline {paragraph}{Shades and Contours}{33}{section*.96}%
+\contentsline {subsection}{\numberline {1.7.3}Logic synthesis}{33}{subsection.1.7.3}%
+\contentsline {paragraph}{Minterms}{33}{section*.98}%
+\contentsline {paragraph}{Maxterms}{33}{section*.99}%
+\contentsline {paragraph}{Logic synthesis with Minterm/Maxterms}{34}{section*.100}%
+\contentsline {paragraph}{Sum of products (SoP) form}{34}{section*.101}%
+\contentsline {subsection}{\numberline {1.7.4}NANS and NOR logic Networks}{36}{subsection.1.7.4}%
+\contentsline {paragraph}{NAND and NOR gates}{36}{section*.102}%
+\contentsline {paragraph}{NOT gate using NAND or NOR}{36}{section*.103}%
+\contentsline {subsection}{\numberline {1.7.5}Incomplety definded Functions}{37}{subsection.1.7.5}%
+\contentsline {paragraph}{Incompletely defined function}{37}{section*.104}%
+\contentsline {paragraph}{Example}{37}{section*.105}%
+\contentsline {paragraph}{Even and Odd detectors}{38}{section*.106}%
+\contentsline {paragraph}{Number display}{38}{section*.107}%
+\contentsline {paragraph}{Data selector}{38}{section*.108}%
