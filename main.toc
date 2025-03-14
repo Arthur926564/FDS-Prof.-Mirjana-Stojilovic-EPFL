@@ -126,3 +126,16 @@
 \contentsline {paragraph}{Even and Odd detectors}{38}{section*.106}%
 \contentsline {paragraph}{Number display}{38}{section*.107}%
 \contentsline {paragraph}{Data selector}{38}{section*.108}%
+\contentsline {subsection}{\numberline {1.7.6}Adders}{39}{subsection.1.7.6}%
+\contentsline {paragraph}{Adders of two 1-bit binary}{39}{section*.110}%
+\contentsline {paragraph}{Addition of two $n$ bit binary number}{40}{section*.111}%
+\contentsline {paragraph}{Iterative approach}{40}{section*.112}%
+\contentsline {paragraph}{Full adder:}{40}{section*.113}%
+\contentsline {paragraph}{Substraction of two $1$ bit binary number}{42}{section*.114}%
+\contentsline {paragraph}{Subtraction of two n-bit unsigned number}{42}{section*.115}%
+\contentsline {paragraph}{Full subtractor}{42}{section*.116}%
+\contentsline {paragraph}{Adders-Subtractors in two's complement}{43}{section*.117}%
+\contentsline {subsection}{\numberline {1.7.7}Fast Adders}{44}{subsection.1.7.7}%
+\contentsline {paragraph}{Performance Matters}{44}{section*.118}%
+\contentsline {subsection}{\numberline {1.7.8}Shifting}{44}{subsection.1.7.8}%
+\contentsline {paragraph}{Barrel shifter}{44}{section*.119}%
