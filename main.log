@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.21.0 (MiKTeX 25.2) (format=lualatex 2025.3.6)  14 MAR 2025 18:08
+This is LuaHBTeX, Version 1.21.0 (MiKTeX 25.2) (format=lualatex 2025.3.6)  17 MAR 2025 14:53
  restricted system commands enabled.
  file:line:error style messages enabled.
 **main.tex
@@ -2377,7 +2377,7 @@ Package mdframed Info: mdframed inside a box
 LaTeX Warning: Hyper reference `lecturesummary2' on page 9 undefined on input l
 ine 3.
 
-<Capture d’écran (112).png, id=253, 1046.40938pt x 385.44pt>
+<Capture d’écran (112).png, id=255, 1046.40938pt x 385.44pt>
 File: Capture d’écran (112).png Graphic file (type png)
 <use Capture d’écran (112).png>
 Package luatex.def Info: Capture d’écran (112).png  used on input line 9.
@@ -2385,7 +2385,7 @@ Package luatex.def Info: Capture d’écran (112).png  used on input line 9.
 
 
 [9]
-<Capture d’écran (113).png, id=261, 1432.60219pt x 534.49687pt>
+<Capture d’écran (113).png, id=263, 1432.60219pt x 534.49687pt>
 File: Capture d’écran (113).png Graphic file (type png)
 <use Capture d’écran (113).png>
 Package luatex.def Info: Capture d’écran (113).png  used on input line 29.
@@ -2393,7 +2393,7 @@ Package luatex.def Info: Capture d’écran (113).png  used on input line 29.
 
 
 [10<./Capture d’écran (112).png>]
-<Capture d’écran (114).png, id=270, 803.25093pt x 408.02437pt>
+<Capture d’écran (114).png, id=272, 803.25093pt x 408.02437pt>
 File: Capture d’écran (114).png Graphic file (type png)
 <use Capture d’écran (114).png>
 Package luatex.def Info: Capture d’écran (114).png  used on input line 56.
@@ -2454,7 +2454,7 @@ Package mdframed Info: mdframed inside a box
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.1.1
 '
 ]
-<Screenshot 2025-02-24 131346.png, id=302, 813.0375pt x 379.4175pt>
+<Screenshot 2025-02-24 131346.png, id=304, 813.0375pt x 379.4175pt>
 File: Screenshot 2025-02-24 131346.png Graphic file (type png)
 <use Screenshot 2025-02-24 131346.png>
 Package luatex.def Info: Screenshot 2025-02-24 131346.png  used on input line 4
@@ -2683,7 +2683,7 @@ Package mdframed Info: mdframed inside a box
 Package mdframed Info: mdframed works in twoside mode on input line 57.
 Package mdframed Info: mdframed inside a box 
  mdframed uses option nobreak mdframed on input line 59.
-<logicgate2025-03-10.png, id=474, 359.54324pt x 126.4725pt>
+<logicgate2025-03-10.png, id=476, 359.54324pt x 126.4725pt>
 File: logicgate2025-03-10.png Graphic file (type png)
 <use logicgate2025-03-10.png>
 Package luatex.def Info: logicgate2025-03-10.png  used on input line 98.
@@ -2695,7 +2695,7 @@ Overfull \hbox (52.86983pt too wide) detected at line 115
 []
  []
 
-<gateAnd2025-03-10.png, id=482, 343.88475pt x 162.6075pt>
+<gateAnd2025-03-10.png, id=484, 343.88475pt x 162.6075pt>
 File: gateAnd2025-03-10.png Graphic file (type png)
 <use gateAnd2025-03-10.png>
 Package luatex.def Info: gateAnd2025-03-10.png  used on input line 150.
@@ -2703,7 +2703,7 @@ Package luatex.def Info: gateAnd2025-03-10.png  used on input line 150.
 
 
 [35<./logicgate2025-03-10.png>]
-<NANDNOR2025-03-10.png, id=488, 545.6385pt x 121.05225pt>
+<NANDNOR2025-03-10.png, id=490, 545.6385pt x 121.05225pt>
 File: NANDNOR2025-03-10.png Graphic file (type png)
 <use NANDNOR2025-03-10.png>
 Package luatex.def Info: NANDNOR2025-03-10.png  used on input line 159.
@@ -2713,13 +2713,13 @@ Overfull \hbox (18.03365pt too wide) in paragraph at lines 159--160
  [] 
  []
 
-<morgantheoremgate2025-03-10.png, id=489, 711.8595pt x 414.348pt>
+<morgantheoremgate2025-03-10.png, id=491, 711.8595pt x 414.348pt>
 File: morgantheoremgate2025-03-10.png Graphic file (type png)
 <use morgantheoremgate2025-03-10.png>
 Package luatex.def Info: morgantheoremgate2025-03-10.png  used on input line 16
 3.
 (luatex.def)             Requested size: 284.73875pt x 165.73625pt.
-<notgatenandnor2025-03-10.png, id=490, 504.6855pt x 115.632pt>
+<notgatenandnor2025-03-10.png, id=492, 504.6855pt x 115.632pt>
 File: notgatenandnor2025-03-10.png Graphic file (type png)
 <use notgatenandnor2025-03-10.png>
 Package luatex.def Info: notgatenandnor2025-03-10.png  used on input line 170.
@@ -2728,7 +2728,7 @@ Package luatex.def Info: notgatenandnor2025-03-10.png  used on input line 170.
 
 [36<./gateAnd2025-03-10.png><./NANDNOR2025-03-10.png><./morgantheoremgate2025-03
 -10.png><./notgatenandnor2025-03-10.png>]
-<gate22025-03-10.png, id=501, 323.40825pt x 170.43675pt>
+<gate22025-03-10.png, id=503, 323.40825pt x 170.43675pt>
 File: gate22025-03-10.png Graphic file (type png)
 <use gate22025-03-10.png>
 Package luatex.def Info: gate22025-03-10.png  used on input line 187.
@@ -2739,12 +2739,12 @@ Package luatex.def Info: gate22025-03-10.png  used on input line 187.
 Missing character: There is no … (U+2026) in font ec-lmr10!
 Missing character: There is no ’ (U+2019) in font ec-lmr10!
 <./gate22025-03-10.png>]
-<xor2025-03-10.png, id=509, 148.1535pt x 97.5645pt>
+<xor2025-03-10.png, id=511, 148.1535pt x 97.5645pt>
 File: xor2025-03-10.png Graphic file (type png)
 <use xor2025-03-10.png>
 Package luatex.def Info: xor2025-03-10.png  used on input line 232.
 (luatex.def)             Requested size: 118.52295pt x 78.05168pt.
-<xnor2025-03-10.png, id=510, 142.73325pt x 100.57574pt>
+<xnor2025-03-10.png, id=512, 142.73325pt x 100.57574pt>
 File: xnor2025-03-10.png Graphic file (type png)
 <use xnor2025-03-10.png>
 Package luatex.def Info: xnor2025-03-10.png  used on input line 236.
@@ -2756,7 +2756,7 @@ Package luatex.def Info: xnor2025-03-10.png  used on input line 236.
 LaTeX Warning: Hyper reference `lecturesummary8' on page 39 undefined on input 
 line 1.
 
-<12025-03-14.png, id=520, 284.262pt x 260.172pt>
+<12025-03-14.png, id=522, 284.262pt x 260.172pt>
 File: 12025-03-14.png Graphic file (type png)
 <use 12025-03-14.png>
 Package luatex.def Info: 12025-03-14.png  used on input line 32.
@@ -2764,57 +2764,106 @@ Package luatex.def Info: 12025-03-14.png  used on input line 32.
 
 
 [39]
+Package mdframed Info: mdframed works in twoside mode on input line 101.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 103.
+
 
 [40<./12025-03-14.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 106--108
+Underfull \hbox (badness 10000) in paragraph at lines 110--112
 
  []
 
-<22025-03-14.png, id=534, 395.67825pt x 136.71075pt>
+<22025-03-14.png, id=536, 395.67825pt x 136.71075pt>
 File: 22025-03-14.png Graphic file (type png)
 <use 22025-03-14.png>
-Package luatex.def Info: 22025-03-14.png  used on input line 121.
+Package luatex.def Info: 22025-03-14.png  used on input line 125.
 (luatex.def)             Requested size: 276.97289pt x 95.69685pt.
 
 
 [41<./22025-03-14.png>]
-<32025-03-14.png, id=541, 248.127pt x 204.765pt>
+<32025-03-14.png, id=543, 248.127pt x 204.765pt>
 File: 32025-03-14.png Graphic file (type png)
 <use 32025-03-14.png>
-Package luatex.def Info: 32025-03-14.png  used on input line 134.
-(luatex.def)             Requested size: 124.06319pt x 102.38223pt.
-<42025-03-14.png, id=542, 155.3805pt x 112.0185pt>
+Package luatex.def Info: 32025-03-14.png  used on input line 138.
+(luatex.def)             Requested size: 198.50185pt x 163.8122pt.
+<42025-03-14.png, id=544, 155.3805pt x 112.0185pt>
 File: 42025-03-14.png Graphic file (type png)
 <use 42025-03-14.png>
-Package luatex.def Info: 42025-03-14.png  used on input line 138.
+Package luatex.def Info: 42025-03-14.png  used on input line 142.
 (luatex.def)             Requested size: 170.91905pt x 123.2207pt.
-Package mdframed Info: mdframed works in twoside mode on input line 146.
+Package mdframed Info: mdframed works in twoside mode on input line 150.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 148.
-<52025-03-14.png, id=543, 409.53pt x 175.857pt>
-File: 52025-03-14.png Graphic file (type png)
-<use 52025-03-14.png>
-Package luatex.def Info: 52025-03-14.png  used on input line 194.
-(luatex.def)             Requested size: 327.62444pt x 140.68578pt.
+ mdframed uses option nobreak mdframed on input line 152.
 
 
 [42<./32025-03-14.png><./42025-03-14.png>]
-<62025-03-14.png, id=553, 334.24875pt x 150.5625pt>
+<52025-03-14.png, id=553, 409.53pt x 175.857pt>
+File: 52025-03-14.png Graphic file (type png)
+<use 52025-03-14.png>
+Package luatex.def Info: 52025-03-14.png  used on input line 199.
+(luatex.def)             Requested size: 327.62444pt x 140.68578pt.
+<62025-03-14.png, id=554, 334.24875pt x 150.5625pt>
 File: 62025-03-14.png Graphic file (type png)
 <use 62025-03-14.png>
-Package luatex.def Info: 62025-03-14.png  used on input line 227.
+Package luatex.def Info: 62025-03-14.png  used on input line 232.
 (luatex.def)             Requested size: 233.97252pt x 105.39302pt.
 
 
 [43<./52025-03-14.png>]
-Package mdframed Info: mdframed works in twoside mode on input line 256.
+File: 32025-03-14.png Graphic file (type png)
+<use 32025-03-14.png>
+Package luatex.def Info: 32025-03-14.png  used on input line 249.
+(luatex.def)             Requested size: 198.50185pt x 163.8122pt.
+
+
+[44<./62025-03-14.png>]
+<12025-03-17.png, id=568, 386.6445pt x 269.808pt>
+File: 12025-03-17.png Graphic file (type png)
+<use 12025-03-17.png>
+Package luatex.def Info: 12025-03-17.png  used on input line 272.
+(luatex.def)             Requested size: 309.31601pt x 215.8467pt.
+
+Overfull \hbox (16.53719pt too wide) in paragraph at lines 272--273
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--276
+
+ []
+
+
+
+[45<./12025-03-17.png>]
+Overfull \hbox (114.0319pt too wide) detected at line 305
+[]
+ []
+
+Package mdframed Info: mdframed works in twoside mode on input line 319.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 258.
+ mdframed uses option nobreak mdframed on input line 321.
 
 
-[44<./62025-03-14.png>])
+[46]
+<22025-03-17.png, id=580, 691.383pt x 122.25674pt>
+File: 22025-03-17.png Graphic file (type png)
+<use 22025-03-17.png>
+Package luatex.def Info: 22025-03-17.png  used on input line 338.
+(luatex.def)             Requested size: 207.4165pt x 36.67729pt.
+<32025-03-17.png, id=581, 693.792pt x 260.172pt>
+File: 32025-03-17.png Graphic file (type png)
+<use 32025-03-17.png>
+Package luatex.def Info: 32025-03-17.png  used on input line 344.
+(luatex.def)             Requested size: 208.1392pt x 78.05219pt.
+) (./lecture9.tex
 
-[45] (./main.aux)
+LaTeX Warning: Hyper reference `lecturesummary9' on page 47 undefined on input 
+line 1.
+
+)
+
+[47<./22025-03-17.png><./32025-03-17.png>] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -2828,15 +2877,15 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 60128 strings out of 475506
- 100000,2373549 words of node,token memory allocated
- 7188 words of node memory still in use:
-   8 hlist, 2 vlist, 2 rule, 1 local_par, 268 glue, 4 kern, 2 penalty, 2 margin_
-kern, 5 glyph, 1867 attribute, 155 glue_spec, 268 attribute_list, 2 shape, 2 wri
+ 60184 strings out of 475506
+ 125005,2373549 words of node,token memory allocated
+ 7575 words of node memory still in use:
+   8 hlist, 2 vlist, 2 rule, 1 local_par, 285 glue, 5 kern, 2 penalty, 2 margin_
+kern, 6 glyph, 1979 attribute, 155 glue_spec, 284 attribute_list, 2 shape, 2 wri
 te nodes
-   avail lists: 1:9,2:10708,3:1405,4:322,5:533,6:104,7:6557,8:68,9:1187,10:21,11
+   avail lists: 1:9,2:10589,3:1406,4:322,5:534,6:105,7:6541,8:70,9:1228,10:21,11
 :439,12:1
- 81226 multiletter control sequences out of 65536+600000
+ 81266 multiletter control sequences out of 65536+600000
  81 fonts using 5359671 bytes
  110i,19n,120p,1951b,1421s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {C:/Users/Maintenant Prêt/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-e
@@ -2870,9 +2919,9 @@ ntenant Prêt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/
 Users/Maintenant Prêt/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8
 .pfb><C:/Users/Maintenant Prêt/AppData/Local/Programs/MiKTeX/fonts/type1/public
 /lm/lmtt10.pfb>
-Output written on main.pdf (45 pages, 1198341 bytes).
+Output written on main.pdf (47 pages, 1318914 bytes).
 
-PDF statistics: 658 PDF objects out of 1000 (max. 8388607)
- 221 named destinations out of 1000 (max. 131072)
+PDF statistics: 674 PDF objects out of 1000 (max. 8388607)
+ 224 named destinations out of 1000 (max. 131072)
  288 words of extra memory for PDF output out of 10000 (max. 100000000)
 
