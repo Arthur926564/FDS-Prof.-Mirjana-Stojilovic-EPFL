@@ -139,3 +139,19 @@
 \contentsline {paragraph}{Performance Matters}{44}{section*.118}%
 \contentsline {subsection}{\numberline {1.7.8}Shifting}{46}{subsection.1.7.8}%
 \contentsline {paragraph}{Barrel shifter}{46}{section*.119}%
+\contentsline {paragraph}{Previously on FDS}{47}{section*.122}%
+\contentsline {section}{\numberline {1.8}Computer Aided Design}{47}{section.1.8}%
+\contentsline {paragraph}{Introduction to CAD tools}{47}{section*.123}%
+\contentsline {paragraph}{Design Entry}{47}{section*.124}%
+\contentsline {paragraph}{Functional simulation}{48}{section*.125}%
+\contentsline {paragraph}{Physical Design}{48}{section*.126}%
+\contentsline {paragraph}{Timing simulation}{48}{section*.127}%
+\contentsline {paragraph}{Circuit implementation}{48}{section*.128}%
+\contentsline {subsection}{\numberline {1.8.1}Verilog}{49}{subsection.1.8.1}%
+\contentsline {paragraph}{Bried history of verilog}{49}{section*.129}%
+\contentsline {paragraph}{Modeling of digital circuits in verilog}{49}{section*.130}%
+\contentsline {paragraph}{Structural Modeling with logic gates}{49}{section*.131}%
+\contentsline {paragraph}{Verilog Syntax}{49}{section*.132}%
+\contentsline {paragraph}{Modules in verilog}{49}{section*.133}%
+\contentsline {paragraph}{Full adder in verilog}{50}{section*.134}%
+\contentsline {paragraph}{Subcircuits in Verilog}{50}{section*.135}%
