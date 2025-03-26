@@ -6,5 +6,9 @@ main.lectures
 main.out
 main.toc
 main.xdv
+main.synctex.gz
+main.fdb_latexmk
+
 ~/
+
 
