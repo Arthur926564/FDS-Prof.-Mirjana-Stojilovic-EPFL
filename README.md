@@ -1,0 +1,1 @@
+I stopped during semester taking notes because I didn't have a fast way to make diagram (I didn't manage to install well inkscape and having it working nicely) and this course has a lot of it. But I think we can still find the beginning of the semester.
